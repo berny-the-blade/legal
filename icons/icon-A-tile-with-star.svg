@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Concept A: Bold [6|6] tile + brass star corner.
+       Premium, broadly appealing, subtle Pernambuco nod via the brass star. -->
+
+  <!-- Background: forest green felt with subtle vignette -->
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#216042"/>
+      <stop offset="100%" stop-color="#143a2c"/>
+    </radialGradient>
+    <linearGradient id="tileGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fdf6e3"/>
+      <stop offset="100%" stop-color="#ede1c3"/>
+    </linearGradient>
+    <filter id="tileShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+      <feOffset dx="0" dy="6" result="off"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.45"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" rx="100" ry="100" fill="url(#bgGrad)"/>
+
+  <!-- Tile [6|6] centered, slight rotation for character -->
+  <g transform="translate(256 256) rotate(-6)" filter="url(#tileShadow)">
+    <!-- Tile body: 340 wide × 170 tall (2:1) -->
+    <rect x="-170" y="-85" width="340" height="170" rx="14" ry="14" fill="url(#tileGrad)" stroke="#bda06a" stroke-width="2"/>
+    <!-- Center divider -->
+    <line x1="0" y1="-65" x2="0" y2="65" stroke="#1c1c1c" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Left half: 6 pips -->
+    <g fill="#1c1c1c">
+      <circle cx="-130" cy="-50" r="11"/>
+      <circle cx="-130" cy="0" r="11"/>
+      <circle cx="-130" cy="50" r="11"/>
+      <circle cx="-50" cy="-50" r="11"/>
+      <circle cx="-50" cy="0" r="11"/>
+      <circle cx="-50" cy="50" r="11"/>
+    </g>
+    <!-- Right half: 6 pips -->
+    <g fill="#1c1c1c">
+      <circle cx="50" cy="-50" r="11"/>
+      <circle cx="50" cy="0" r="11"/>
+      <circle cx="50" cy="50" r="11"/>
+      <circle cx="130" cy="-50" r="11"/>
+      <circle cx="130" cy="0" r="11"/>
+      <circle cx="130" cy="50" r="11"/>
+    </g>
+  </g>
+
+  <!-- Brass star (Pernambuco-inspired) top-right -->
+  <g transform="translate(395 117)" fill="#d4b269" stroke="#8e6e3a" stroke-width="2">
+    <polygon points="0,-36 11,-11 38,-11 16,6 24,32 0,17 -24,32 -16,6 -38,-11 -11,-11"/>
+  </g>
+</svg>

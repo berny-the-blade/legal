@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Concept C: Single tile, one half with classic pips, other half with the
+       white star from the Pernambuco flag replacing the pip pattern.
+       Most authentically regional without copying the full flag. -->
+
+  <defs>
+    <radialGradient id="bgGradC" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#216042"/>
+      <stop offset="100%" stop-color="#143a2c"/>
+    </radialGradient>
+    <linearGradient id="tileGradC" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fdf6e3"/>
+      <stop offset="100%" stop-color="#ede1c3"/>
+    </linearGradient>
+    <filter id="tileShadowC" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+      <feOffset dx="0" dy="6"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.45"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" rx="100" ry="100" fill="url(#bgGradC)"/>
+
+  <!-- Vertical tile, larger so the star reads at small sizes -->
+  <g transform="translate(256 256)" filter="url(#tileShadowC)">
+    <!-- Tile body: 200 wide × 360 tall (1:1.8) -->
+    <rect x="-100" y="-180" width="200" height="360" rx="14" ry="14" fill="url(#tileGradC)" stroke="#bda06a" stroke-width="2"/>
+    <!-- Horizontal divider -->
+    <line x1="-78" y1="0" x2="78" y2="0" stroke="#1c1c1c" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Top half: 5 pips (classic domino "5") -->
+    <g fill="#1c1c1c">
+      <circle cx="-50" cy="-130" r="13"/>
+      <circle cx="50" cy="-130" r="13"/>
+      <circle cx="0" cy="-90" r="13"/>
+      <circle cx="-50" cy="-50" r="13"/>
+      <circle cx="50" cy="-50" r="13"/>
+    </g>
+
+    <!-- Bottom half: white Pernambuco-flag star (5-pointed) instead of pips -->
+    <g transform="translate(0 90)">
+      <!-- Subtle dark circle behind to anchor it -->
+      <circle r="58" fill="#1c1c1c" opacity="0.08"/>
+      <polygon points="0,-56 17,-17 58,-17 25,9 38,50 0,26 -38,50 -25,9 -58,-17 -17,-17"
+               fill="#ffffff" stroke="#9c9c9c" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Concept B: Two crossed tiles forming an X — partnership symbol.
+       Signals 4-player duplas / cross-team play. Most "indie premium" feel. -->
+
+  <defs>
+    <radialGradient id="bgGradB" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#216042"/>
+      <stop offset="100%" stop-color="#143a2c"/>
+    </radialGradient>
+    <linearGradient id="tileGradB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fdf6e3"/>
+      <stop offset="100%" stop-color="#ede1c3"/>
+    </linearGradient>
+    <filter id="tileShadowB" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dx="0" dy="8" result="off"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" rx="100" ry="100" fill="url(#bgGradB)"/>
+
+  <!-- Brass diagonal accent behind tiles -->
+  <g transform="translate(256 256)" opacity="0.18">
+    <rect x="-220" y="-6" width="440" height="12" fill="#d4b269" transform="rotate(45)"/>
+    <rect x="-220" y="-6" width="440" height="12" fill="#d4b269" transform="rotate(-45)"/>
+  </g>
+
+  <!-- Tile 1: [4|4] rotated -45 (top-left to bottom-right) -->
+  <g transform="translate(256 256) rotate(-45)" filter="url(#tileShadowB)">
+    <rect x="-150" y="-75" width="300" height="150" rx="12" ry="12" fill="url(#tileGradB)" stroke="#bda06a" stroke-width="2"/>
+    <line x1="0" y1="-58" x2="0" y2="58" stroke="#1c1c1c" stroke-width="3" stroke-linecap="round"/>
+    <!-- 4 pips left -->
+    <g fill="#1c1c1c">
+      <circle cx="-110" cy="-40" r="10"/>
+      <circle cx="-40" cy="-40" r="10"/>
+      <circle cx="-110" cy="40" r="10"/>
+      <circle cx="-40" cy="40" r="10"/>
+    </g>
+    <!-- 4 pips right -->
+    <g fill="#1c1c1c">
+      <circle cx="40" cy="-40" r="10"/>
+      <circle cx="110" cy="-40" r="10"/>
+      <circle cx="40" cy="40" r="10"/>
+      <circle cx="110" cy="40" r="10"/>
+    </g>
+  </g>
+
+  <!-- Tile 2: [3|3] rotated +45 (top-right to bottom-left), overlapping on top -->
+  <g transform="translate(256 256) rotate(45)" filter="url(#tileShadowB)">
+    <rect x="-150" y="-75" width="300" height="150" rx="12" ry="12" fill="url(#tileGradB)" stroke="#bda06a" stroke-width="2"/>
+    <line x1="0" y1="-58" x2="0" y2="58" stroke="#1c1c1c" stroke-width="3" stroke-linecap="round"/>
+    <!-- 3 pips left (diagonal) -->
+    <g fill="#1c1c1c">
+      <circle cx="-110" cy="-40" r="10"/>
+      <circle cx="-75" cy="0" r="10"/>
+      <circle cx="-40" cy="40" r="10"/>
+    </g>
+    <!-- 3 pips right (diagonal) -->
+    <g fill="#1c1c1c">
+      <circle cx="40" cy="-40" r="10"/>
+      <circle cx="75" cy="0" r="10"/>
+      <circle cx="110" cy="40" r="10"/>
+    </g>
+  </g>
+</svg>
