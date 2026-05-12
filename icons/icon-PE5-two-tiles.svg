@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- PE5: Correct flag + TWO overlapping tiles at different angles.
+       Signals "partnership / duplas" — your 4-player wedge. -->
+  <defs>
+    <linearGradient id="bluePE5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a5cb0"/><stop offset="100%" stop-color="#0d3b78"/>
+    </linearGradient>
+    <linearGradient id="tilePE5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fdf6e3"/><stop offset="100%" stop-color="#ede1c3"/>
+    </linearGradient>
+    <filter id="tShadow5" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="12"/><feOffset dx="0" dy="12"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.65"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="clip5"><rect width="512" height="512" rx="100" ry="100"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#clip5)">
+    <rect width="512" height="320" fill="url(#bluePE5)"/>
+    <rect y="320" width="512" height="192" fill="#f4ecd8"/>
+    <g fill="none">
+      <path d="M 41 320 A 215 215 0 0 1 471 320" stroke="#d23535" stroke-width="22"/>
+      <path d="M 63 320 A 193 193 0 0 1 449 320" stroke="#f5cf5b" stroke-width="22"/>
+      <path d="M 85 320 A 171 171 0 0 1 427 320" stroke="#5fa05f" stroke-width="22"/>
+    </g>
+    <circle cx="256" cy="295" r="60" fill="#f5cf5b" stroke="#a8842e" stroke-width="3"/>
+    <g transform="translate(256 95)">
+      <polygon points="0,-48 15,-15 50,-15 22,8 32,42 0,22 -32,42 -22,8 -50,-15 -15,-15"
+               fill="#f5cf5b" stroke="#a8842e" stroke-width="2"/>
+    </g>
+    <g fill="#c83737" stroke="#8a2828" stroke-width="2">
+      <rect x="244" y="356" width="24" height="120" rx="2"/>
+      <rect x="208" y="392" width="96" height="24" rx="2"/>
+    </g>
+  </g>
+
+  <!-- Back tile: -25°, [4|4], slightly offset up-left -->
+  <g transform="translate(220 295) rotate(-25)" filter="url(#tShadow5)">
+    <rect x="-175" y="-87" width="350" height="174" rx="16" ry="16" fill="url(#tilePE5)" stroke="#bda06a" stroke-width="3"/>
+    <line x1="0" y1="-68" x2="0" y2="68" stroke="#1c1c1c" stroke-width="3" stroke-linecap="round"/>
+    <g fill="#1c1c1c">
+      <circle cx="-130" cy="-45" r="11"/><circle cx="-46" cy="-45" r="11"/>
+      <circle cx="-130" cy="45" r="11"/><circle cx="-46" cy="45" r="11"/>
+    </g>
+    <g fill="#1c1c1c">
+      <circle cx="46" cy="-45" r="11"/><circle cx="130" cy="-45" r="11"/>
+      <circle cx="46" cy="45" r="11"/><circle cx="130" cy="45" r="11"/>
+    </g>
+  </g>
+
+  <!-- Front tile: +15°, [6|6], on top -->
+  <g transform="translate(296 350) rotate(15)" filter="url(#tShadow5)">
+    <rect x="-175" y="-87" width="350" height="174" rx="16" ry="16" fill="url(#tilePE5)" stroke="#bda06a" stroke-width="3"/>
+    <line x1="0" y1="-68" x2="0" y2="68" stroke="#1c1c1c" stroke-width="3" stroke-linecap="round"/>
+    <g fill="#1c1c1c">
+      <circle cx="-135" cy="-50" r="11"/><circle cx="-135" cy="0" r="11"/><circle cx="-135" cy="50" r="11"/>
+      <circle cx="-50" cy="-50" r="11"/><circle cx="-50" cy="0" r="11"/><circle cx="-50" cy="50" r="11"/>
+    </g>
+    <g fill="#1c1c1c">
+      <circle cx="50" cy="-50" r="11"/><circle cx="50" cy="0" r="11"/><circle cx="50" cy="50" r="11"/>
+      <circle cx="135" cy="-50" r="11"/><circle cx="135" cy="0" r="11"/><circle cx="135" cy="50" r="11"/>
+    </g>
+  </g>
+</svg>

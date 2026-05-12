@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- PE3: Correct flag (yellow star), BIG horizontal tile centered.
+       Tile sits over the boundary between blue and white. -->
+  <defs>
+    <linearGradient id="bluePE3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a5cb0"/><stop offset="100%" stop-color="#0d3b78"/>
+    </linearGradient>
+    <linearGradient id="tilePE3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fdf6e3"/><stop offset="100%" stop-color="#ede1c3"/>
+    </linearGradient>
+    <filter id="tShadow3" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="12"/><feOffset dx="0" dy="12"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.65"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="clip3"><rect width="512" height="512" rx="100" ry="100"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#clip3)">
+    <rect width="512" height="320" fill="url(#bluePE3)"/>
+    <rect y="320" width="512" height="192" fill="#f4ecd8"/>
+    <g fill="none">
+      <path d="M 41 320 A 215 215 0 0 1 471 320" stroke="#d23535" stroke-width="22"/>
+      <path d="M 63 320 A 193 193 0 0 1 449 320" stroke="#f5cf5b" stroke-width="22"/>
+      <path d="M 85 320 A 171 171 0 0 1 427 320" stroke="#5fa05f" stroke-width="22"/>
+    </g>
+    <circle cx="256" cy="295" r="60" fill="#f5cf5b" stroke="#a8842e" stroke-width="3"/>
+    <!-- Yellow star (corrected, was white) -->
+    <g transform="translate(256 95)">
+      <polygon points="0,-48 15,-15 50,-15 22,8 32,42 0,22 -32,42 -22,8 -50,-15 -15,-15"
+               fill="#f5cf5b" stroke="#a8842e" stroke-width="2"/>
+    </g>
+    <g fill="#c83737" stroke="#8a2828" stroke-width="2">
+      <rect x="244" y="356" width="24" height="120" rx="2"/>
+      <rect x="208" y="392" width="96" height="24" rx="2"/>
+    </g>
+  </g>
+
+  <!-- BIG horizontal tile centered over the boundary -->
+  <g transform="translate(256 320)" filter="url(#tShadow3)">
+    <rect x="-200" y="-100" width="400" height="200" rx="18" ry="18" fill="url(#tilePE3)" stroke="#bda06a" stroke-width="3"/>
+    <line x1="0" y1="-78" x2="0" y2="78" stroke="#1c1c1c" stroke-width="3.5" stroke-linecap="round"/>
+    <g fill="#1c1c1c">
+      <circle cx="-155" cy="-58" r="13"/><circle cx="-155" cy="0" r="13"/><circle cx="-155" cy="58" r="13"/>
+      <circle cx="-62" cy="-58" r="13"/><circle cx="-62" cy="0" r="13"/><circle cx="-62" cy="58" r="13"/>
+    </g>
+    <g fill="#1c1c1c">
+      <circle cx="62" cy="-58" r="13"/><circle cx="62" cy="0" r="13"/><circle cx="62" cy="58" r="13"/>
+      <circle cx="155" cy="-58" r="13"/><circle cx="155" cy="0" r="13"/><circle cx="155" cy="58" r="13"/>
+    </g>
+  </g>
+</svg>
