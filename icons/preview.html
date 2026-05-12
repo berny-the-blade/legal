@@ -3,99 +3,128 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Icon concepts — Tablebound Studios</title>
+<title>Icon concepts v2 — Tablebound Studios</title>
 <style>
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
          background: #1c1c1c; color: #f4ecd8; margin: 0; padding: 24px; line-height: 1.5; }
   h1 { color: #b8964e; font-family: Georgia, serif; margin: 0 0 8px 0; }
   .intro { color: #888; margin-bottom: 32px; font-size: 14px; }
+  .section-title { color: #b8964e; font-family: Georgia, serif; margin: 40px 0 16px 0; padding-bottom: 8px; border-bottom: 1px solid #444; }
   .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 24px; }
   .concept { background: #2a2a2a; border-radius: 16px; padding: 20px; }
+  .concept.new { border: 2px solid #b8964e; }
+  .concept.rejected { opacity: 0.45; }
   .concept h2 { color: #f4ecd8; margin: 0 0 4px 0; font-size: 18px; }
-  .concept .tag { color: #b8964e; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+  .concept .tag { color: #b8964e; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+  .concept .tag.new { color: #5cd97c; }
+  .concept .tag.rejected { color: #d97c5c; }
   .concept .desc { color: #aaa; font-size: 13px; margin-bottom: 16px; }
-  .sizes { display: flex; align-items: flex-end; gap: 12px; flex-wrap: wrap; }
+  .sizes { display: flex; align-items: flex-end; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
   .size { display: flex; flex-direction: column; align-items: center; gap: 4px; }
   .size img { display: block; }
   .size .label { color: #666; font-size: 10px; }
-  .full { width: 100%; margin-top: 16px; border-radius: 12px; }
-  .summary { background: #2a2a2a; border-radius: 16px; padding: 20px; margin-top: 32px; }
-  .summary h3 { color: #b8964e; margin-top: 0; }
+  .full { width: 100%; border-radius: 12px; }
+  .feedback { background: #2a2a2a; border-radius: 16px; padding: 20px; margin-top: 32px; font-size: 14px; color: #aaa; }
 </style>
 </head>
 <body>
-<h1>Icon concepts — Tablebound Studios</h1>
-<div class="intro">Each preview shows the icon at the sizes the Play Store actually uses. The smallest (48px) is the launcher thumbnail — if it's not readable there, it doesn't work.</div>
+<h1>Icon concepts v2 — Tablebound Studios</h1>
+<div class="intro">Round 2. New concepts (E, F, C2) based on your feedback are highlighted with a gold border. Old concepts kept for reference but faded.</div>
 
+<h3 class="section-title">★ New iterations (please review)</h3>
 <div class="grid">
 
-  <div class="concept">
-    <h2>A · Bold [6|6] tile + brass star</h2>
-    <div class="tag">Safest · premium · broadly appealing</div>
-    <div class="desc">Centered domino with brass star (subtle Pernambuco nod). Reads cleanly at every size. Lowest risk option.</div>
+  <div class="concept new">
+    <h2>E · Tile over Pernambuco flag (subtle)</h2>
+    <div class="tag new">New · Pernambuco flag as backdrop</div>
+    <div class="desc">Red top, blue bottom, white arc, yellow star — all the flag's recognizable elements faded down so the tile stays primary. Pernambucanos see the flag instantly; others see a rich royal-style background.</div>
     <div class="sizes">
-      <div class="size"><img src="icon-A-tile-with-star.svg" width="48" height="48"><div class="label">48</div></div>
-      <div class="size"><img src="icon-A-tile-with-star.svg" width="72" height="72"><div class="label">72</div></div>
-      <div class="size"><img src="icon-A-tile-with-star.svg" width="96" height="96"><div class="label">96</div></div>
-      <div class="size"><img src="icon-A-tile-with-star.svg" width="144" height="144"><div class="label">144</div></div>
-      <div class="size"><img src="icon-A-tile-with-star.svg" width="192" height="192"><div class="label">192</div></div>
+      <div class="size"><img src="icon-E-tile-over-PE-flag-subtle.svg" width="48" height="48"><div class="label">48</div></div>
+      <div class="size"><img src="icon-E-tile-over-PE-flag-subtle.svg" width="72" height="72"><div class="label">72</div></div>
+      <div class="size"><img src="icon-E-tile-over-PE-flag-subtle.svg" width="96" height="96"><div class="label">96</div></div>
+      <div class="size"><img src="icon-E-tile-over-PE-flag-subtle.svg" width="144" height="144"><div class="label">144</div></div>
+      <div class="size"><img src="icon-E-tile-over-PE-flag-subtle.svg" width="192" height="192"><div class="label">192</div></div>
     </div>
-    <img src="icon-A-tile-with-star.svg" class="full">
+    <img src="icon-E-tile-over-PE-flag-subtle.svg" class="full">
   </div>
 
-  <div class="concept">
-    <h2>B · Two crossed tiles (partnership)</h2>
-    <div class="tag">Indie premium · partnership-first signal</div>
-    <div class="desc">Two tiles in an X. Signals "duplas" / 4-player partnership — your differentiator. Most likely to stand out on the Play Store grid.</div>
+  <div class="concept new">
+    <h2>F · Tile over Pernambuco flag (strong)</h2>
+    <div class="tag new">New · Bold flag, smaller tile, big star</div>
+    <div class="desc">Same idea as E but the flag is bold and the tile is smaller. Big yellow star prominent at top. Loudest, most unmistakably Pernambucano. Stands out most in a Play Store grid.</div>
     <div class="sizes">
-      <div class="size"><img src="icon-B-crossed-tiles.svg" width="48" height="48"><div class="label">48</div></div>
-      <div class="size"><img src="icon-B-crossed-tiles.svg" width="72" height="72"><div class="label">72</div></div>
-      <div class="size"><img src="icon-B-crossed-tiles.svg" width="96" height="96"><div class="label">96</div></div>
-      <div class="size"><img src="icon-B-crossed-tiles.svg" width="144" height="144"><div class="label">144</div></div>
-      <div class="size"><img src="icon-B-crossed-tiles.svg" width="192" height="192"><div class="label">192</div></div>
+      <div class="size"><img src="icon-F-tile-over-PE-flag-strong.svg" width="48" height="48"><div class="label">48</div></div>
+      <div class="size"><img src="icon-F-tile-over-PE-flag-strong.svg" width="72" height="72"><div class="label">72</div></div>
+      <div class="size"><img src="icon-F-tile-over-PE-flag-strong.svg" width="96" height="96"><div class="label">96</div></div>
+      <div class="size"><img src="icon-F-tile-over-PE-flag-strong.svg" width="144" height="144"><div class="label">144</div></div>
+      <div class="size"><img src="icon-F-tile-over-PE-flag-strong.svg" width="192" height="192"><div class="label">192</div></div>
     </div>
-    <img src="icon-B-crossed-tiles.svg" class="full">
+    <img src="icon-F-tile-over-PE-flag-strong.svg" class="full">
   </div>
 
-  <div class="concept">
-    <h2>C · Tile with Pernambuco star (vertical)</h2>
-    <div class="tag">Most regional · authentic but not literal</div>
-    <div class="desc">Vertical tile. Top half: classic 5 pips. Bottom half: white star from the Pernambuco flag instead of pips. Pernambucanos see the flag reference instantly; others see decorative tile.</div>
+  <div class="concept new">
+    <h2>C2 · Bigger Pernambuco star on tile</h2>
+    <div class="tag new">New · Revised C, star much bigger</div>
+    <div class="desc">Revised C — star is now much larger with a brass + black backing for maximum contrast and visibility even at 48px. Still subtle (only Pernambucanos catch the meaning) but the star is now obvious as the main visual element.</div>
     <div class="sizes">
-      <div class="size"><img src="icon-C-tile-with-pernambuco-star.svg" width="48" height="48"><div class="label">48</div></div>
-      <div class="size"><img src="icon-C-tile-with-pernambuco-star.svg" width="72" height="72"><div class="label">72</div></div>
-      <div class="size"><img src="icon-C-tile-with-pernambuco-star.svg" width="96" height="96"><div class="label">96</div></div>
-      <div class="size"><img src="icon-C-tile-with-pernambuco-star.svg" width="144" height="144"><div class="label">144</div></div>
-      <div class="size"><img src="icon-C-tile-with-pernambuco-star.svg" width="192" height="192"><div class="label">192</div></div>
+      <div class="size"><img src="icon-C2-bigger-star.svg" width="48" height="48"><div class="label">48</div></div>
+      <div class="size"><img src="icon-C2-bigger-star.svg" width="72" height="72"><div class="label">72</div></div>
+      <div class="size"><img src="icon-C2-bigger-star.svg" width="96" height="96"><div class="label">96</div></div>
+      <div class="size"><img src="icon-C2-bigger-star.svg" width="144" height="144"><div class="label">144</div></div>
+      <div class="size"><img src="icon-C2-bigger-star.svg" width="192" height="192"><div class="label">192</div></div>
     </div>
-    <img src="icon-C-tile-with-pernambuco-star.svg" class="full">
-  </div>
-
-  <div class="concept">
-    <h2>D · Tile + Brazilian color stripe</h2>
-    <div class="tag">Broader Brazil appeal · less Pernambuco-specific</div>
-    <div class="desc">Tile centered over a subtle yellow + green stripe (Brazilian flag colors). Modern but timeless. Skips Pernambuco-specific signaling for broader Brazil appeal.</div>
-    <div class="sizes">
-      <div class="size"><img src="icon-D-brazilian-stripe.svg" width="48" height="48"><div class="label">48</div></div>
-      <div class="size"><img src="icon-D-brazilian-stripe.svg" width="72" height="72"><div class="label">72</div></div>
-      <div class="size"><img src="icon-D-brazilian-stripe.svg" width="96" height="96"><div class="label">96</div></div>
-      <div class="size"><img src="icon-D-brazilian-stripe.svg" width="144" height="144"><div class="label">144</div></div>
-      <div class="size"><img src="icon-D-brazilian-stripe.svg" width="192" height="192"><div class="label">192</div></div>
-    </div>
-    <img src="icon-D-brazilian-stripe.svg" class="full">
+    <img src="icon-C2-bigger-star.svg" class="full">
   </div>
 
 </div>
 
-<div class="summary">
-  <h3>How to decide</h3>
-  <ul>
-    <li><strong>Look at the 48px versions first</strong> — that's what Android launchers show on the home screen. If it's not readable, it's wrong.</li>
-    <li><strong>Squint at each</strong> — if it disappears into a green blob, the contrast is too low. A, B, C should all hold up.</li>
-    <li><strong>Cover the description</strong> — does the icon alone tell you it's a domino app?</li>
-    <li><strong>Mental Play Store test</strong> — imagine these in a grid next to Don Naipe and Domino Master. Which one would you tap?</li>
-  </ul>
-  <p style="color: #888; font-size: 13px;">Pick one (or rank A/B/C/D) and tell me. If you want to send it to a Fiverr designer for polish, the SVG can be the brief. Or we ship as-is and iterate after launch.</p>
+<h3 class="section-title">Original concepts (for reference)</h3>
+<div class="grid">
+
+  <div class="concept">
+    <h2>A · Bold tile + brass star</h2>
+    <div class="tag">Round 1 · brass star nod</div>
+    <div class="sizes">
+      <div class="size"><img src="icon-A-tile-with-star.svg" width="48" height="48"><div class="label">48</div></div>
+      <div class="size"><img src="icon-A-tile-with-star.svg" width="96" height="96"><div class="label">96</div></div>
+      <div class="size"><img src="icon-A-tile-with-star.svg" width="192" height="192"><div class="label">192</div></div>
+    </div>
+  </div>
+
+  <div class="concept">
+    <h2>B · Two crossed tiles</h2>
+    <div class="tag">Round 1 · "ok but strange"</div>
+    <div class="sizes">
+      <div class="size"><img src="icon-B-crossed-tiles.svg" width="48" height="48"><div class="label">48</div></div>
+      <div class="size"><img src="icon-B-crossed-tiles.svg" width="96" height="96"><div class="label">96</div></div>
+      <div class="size"><img src="icon-B-crossed-tiles.svg" width="192" height="192"><div class="label">192</div></div>
+    </div>
+  </div>
+
+  <div class="concept rejected">
+    <h2>C · Pernambuco star (original)</h2>
+    <div class="tag rejected">Star too small — superseded by C2</div>
+    <div class="sizes">
+      <div class="size"><img src="icon-C-tile-with-pernambuco-star.svg" width="48" height="48"><div class="label">48</div></div>
+      <div class="size"><img src="icon-C-tile-with-pernambuco-star.svg" width="96" height="96"><div class="label">96</div></div>
+      <div class="size"><img src="icon-C-tile-with-pernambuco-star.svg" width="192" height="192"><div class="label">192</div></div>
+    </div>
+  </div>
+
+  <div class="concept rejected">
+    <h2>D · Brazilian color stripe</h2>
+    <div class="tag rejected">Rejected</div>
+    <div class="sizes">
+      <div class="size"><img src="icon-D-brazilian-stripe.svg" width="48" height="48"><div class="label">48</div></div>
+      <div class="size"><img src="icon-D-brazilian-stripe.svg" width="96" height="96"><div class="label">96</div></div>
+      <div class="size"><img src="icon-D-brazilian-stripe.svg" width="192" height="192"><div class="label">192</div></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="feedback">
+  <strong>How to decide:</strong> compare E vs F vs C2 at the 48px size first (top-left of each). Tell me which direction wins. I can then refine the chosen one further — adjust star size, flag boldness, tile angle, colors, whatever helps.
 </div>
 
 </body>

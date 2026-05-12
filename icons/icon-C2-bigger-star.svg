@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Concept C2: Revised C — Pernambuco star is now LARGER and bolder.
+       Tile is wider/shorter to give the star more visual weight. -->
+
+  <defs>
+    <radialGradient id="bgGradC2" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#216042"/>
+      <stop offset="100%" stop-color="#143a2c"/>
+    </radialGradient>
+    <linearGradient id="tileGradC2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fdf6e3"/>
+      <stop offset="100%" stop-color="#ede1c3"/>
+    </linearGradient>
+    <filter id="tileShadowC2" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="7"/>
+      <feOffset dx="0" dy="7"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" rx="100" ry="100" fill="url(#bgGradC2)"/>
+
+  <!-- Vertical tile, slightly wider; star half is dominant -->
+  <g transform="translate(256 256)" filter="url(#tileShadowC2)">
+    <!-- Tile body: 240 wide × 380 tall -->
+    <rect x="-120" y="-190" width="240" height="380" rx="16" ry="16" fill="url(#tileGradC2)" stroke="#bda06a" stroke-width="2"/>
+    <!-- Horizontal divider -->
+    <line x1="-95" y1="0" x2="95" y2="0" stroke="#1c1c1c" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Top half: 5 pips -->
+    <g fill="#1c1c1c">
+      <circle cx="-60" cy="-140" r="14"/>
+      <circle cx="60" cy="-140" r="14"/>
+      <circle cx="0" cy="-95" r="14"/>
+      <circle cx="-60" cy="-50" r="14"/>
+      <circle cx="60" cy="-50" r="14"/>
+    </g>
+
+    <!-- Bottom half: BIG bold Pernambuco-style star, filled red rim for max contrast -->
+    <g transform="translate(0 95)">
+      <!-- Brass disk behind star to anchor it visually -->
+      <circle r="82" fill="#d4b269"/>
+      <circle r="74" fill="#1c1c1c"/>
+      <!-- White star, larger -->
+      <polygon points="0,-66 20,-20 68,-20 30,8 44,56 0,30 -44,56 -30,8 -68,-20 -20,-20"
+               fill="#ffffff"/>
+    </g>
+  </g>
+</svg>
