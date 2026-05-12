@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Pernambuco flag rendered correctly:
+       - Blue top (larger), White bottom (smaller)
+       - Rainbow arc: red outer, yellow middle, green inner
+       - White star above arc
+       - Yellow sun inside arc's curve
+       - Red cross on white lower section
+       Tile centered, semi-translucent so flag remains identifiable. -->
+
+  <defs>
+    <linearGradient id="bluePE1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1956a8"/>
+      <stop offset="100%" stop-color="#0d3b78"/>
+    </linearGradient>
+    <linearGradient id="tileGradPE1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fdf6e3"/>
+      <stop offset="100%" stop-color="#ede1c3"/>
+    </linearGradient>
+    <filter id="tileShadowPE1" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10"/>
+      <feOffset dx="0" dy="10"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.6"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="iconClipPE1"><rect width="512" height="512" rx="100" ry="100"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#iconClipPE1)">
+    <!-- Blue upper (62.5%) -->
+    <rect width="512" height="320" fill="url(#bluePE1)"/>
+    <!-- White lower (37.5%) -->
+    <rect y="320" width="512" height="192" fill="#f4ecd8"/>
+
+    <!-- Rainbow arc: 3 concentric stripes, centered at (256, 320), radius outer 215
+         Stripes: red (outermost), yellow, green (innermost) -->
+    <g fill="none" stroke-linecap="butt">
+      <path d="M 41 320 A 215 215 0 0 1 471 320" stroke="#c83737" stroke-width="22"/>
+      <path d="M 63 320 A 193 193 0 0 1 449 320" stroke="#f5cf5b" stroke-width="22"/>
+      <path d="M 85 320 A 171 171 0 0 1 427 320" stroke="#5fa05f" stroke-width="22"/>
+    </g>
+
+    <!-- Sun: yellow disc inside the arc -->
+    <circle cx="256" cy="295" r="58" fill="#f5cf5b" stroke="#a8842e" stroke-width="2"/>
+
+    <!-- White 5-pointed star above the arc -->
+    <g transform="translate(256 95)">
+      <polygon points="0,-46 14,-15 48,-15 20,7 30,40 0,21 -30,40 -20,7 -48,-15 -14,-15"
+               fill="#ffffff" stroke="#aaa" stroke-width="1.5"/>
+    </g>
+
+    <!-- Red cross on white lower section -->
+    <g fill="#c83737" stroke="#8a2828" stroke-width="2">
+      <rect x="244" y="356" width="24" height="120" rx="2"/>
+      <rect x="208" y="392" width="96" height="24" rx="2"/>
+    </g>
+  </g>
+
+  <!-- Domino tile (smaller, lower) so flag stays visible -->
+  <g transform="translate(256 350) rotate(-3)" filter="url(#tileShadowPE1)" opacity="0.97">
+    <rect x="-140" y="-70" width="280" height="140" rx="13" ry="13" fill="url(#tileGradPE1)" stroke="#bda06a" stroke-width="2"/>
+    <line x1="0" y1="-54" x2="0" y2="54" stroke="#1c1c1c" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Left: 6 pips -->
+    <g fill="#1c1c1c">
+      <circle cx="-105" cy="-38" r="9"/><circle cx="-105" cy="0" r="9"/><circle cx="-105" cy="38" r="9"/>
+      <circle cx="-42" cy="-38" r="9"/><circle cx="-42" cy="0" r="9"/><circle cx="-42" cy="38" r="9"/>
+    </g>
+    <!-- Right: 6 pips -->
+    <g fill="#1c1c1c">
+      <circle cx="42" cy="-38" r="9"/><circle cx="42" cy="0" r="9"/><circle cx="42" cy="38" r="9"/>
+      <circle cx="105" cy="-38" r="9"/><circle cx="105" cy="0" r="9"/><circle cx="105" cy="38" r="9"/>
+    </g>
+  </g>
+</svg>

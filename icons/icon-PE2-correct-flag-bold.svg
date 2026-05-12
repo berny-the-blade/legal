@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Bolder version: flag is the dominant subject, small tile in the white section. -->
+
+  <defs>
+    <linearGradient id="bluePE2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a5cb0"/>
+      <stop offset="100%" stop-color="#0d3b78"/>
+    </linearGradient>
+    <linearGradient id="tileGradPE2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fdf6e3"/>
+      <stop offset="100%" stop-color="#ede1c3"/>
+    </linearGradient>
+    <filter id="tileShadowPE2" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+      <feOffset dx="0" dy="6"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.45"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="iconClipPE2"><rect width="512" height="512" rx="100" ry="100"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#iconClipPE2)">
+    <!-- Blue upper (~67%) -->
+    <rect width="512" height="345" fill="url(#bluePE2)"/>
+    <!-- White lower (~33%) -->
+    <rect y="345" width="512" height="167" fill="#f4ecd8"/>
+
+    <!-- Rainbow arc -->
+    <g fill="none" stroke-linecap="butt">
+      <path d="M 36 345 A 220 220 0 0 1 476 345" stroke="#d23535" stroke-width="24"/>
+      <path d="M 60 345 A 196 196 0 0 1 452 345" stroke="#f5cf5b" stroke-width="24"/>
+      <path d="M 84 345 A 172 172 0 0 1 428 345" stroke="#5fa05f" stroke-width="24"/>
+    </g>
+
+    <!-- Yellow sun, larger and brighter -->
+    <circle cx="256" cy="310" r="68" fill="#f5cf5b" stroke="#8a6a26" stroke-width="3"/>
+
+    <!-- White star, large and high -->
+    <g transform="translate(256 100)">
+      <polygon points="0,-58 18,-19 60,-19 26,8 38,50 0,28 -38,50 -26,8 -60,-19 -18,-19"
+               fill="#ffffff" stroke="#777" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- Tile in the white lower section, on top of where the cross would be.
+       The tile EFFECTIVELY replaces the cross — fitting for a domino-themed flag. -->
+  <g transform="translate(256 428)" filter="url(#tileShadowPE2)">
+    <rect x="-115" y="-58" width="230" height="116" rx="11" ry="11" fill="url(#tileGradPE2)" stroke="#bda06a" stroke-width="2"/>
+    <line x1="0" y1="-45" x2="0" y2="45" stroke="#1c1c1c" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Left: 6 pips -->
+    <g fill="#1c1c1c">
+      <circle cx="-86" cy="-32" r="7.5"/><circle cx="-86" cy="0" r="7.5"/><circle cx="-86" cy="32" r="7.5"/>
+      <circle cx="-34" cy="-32" r="7.5"/><circle cx="-34" cy="0" r="7.5"/><circle cx="-34" cy="32" r="7.5"/>
+    </g>
+    <!-- Right: 6 pips -->
+    <g fill="#1c1c1c">
+      <circle cx="34" cy="-32" r="7.5"/><circle cx="34" cy="0" r="7.5"/><circle cx="34" cy="32" r="7.5"/>
+      <circle cx="86" cy="-32" r="7.5"/><circle cx="86" cy="0" r="7.5"/><circle cx="86" cy="32" r="7.5"/>
+    </g>
+  </g>
+</svg>
