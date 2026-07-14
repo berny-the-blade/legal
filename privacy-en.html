@@ -25,7 +25,12 @@
 </style>
 </head>
 <body>
-<div class="nav"><a href="javascript:history.back()">← Back to game</a> &nbsp;|&nbsp; <a href="privacy-pt-BR.html">Versão em português</a></div>
+<div class="nav"><a href="javascript:history.back()" id="backLink">← Back to game</a> &nbsp;|&nbsp; <a href="privacy-pt-BR.html">Versão em português</a></div>
+<script>
+  if (document.referrer.indexOf('/legal/') !== -1) {
+    document.getElementById('backLink').textContent = '← Back to document list';
+  }
+</script>
 
 <h1>Privacy Policy — Domino Pernambuco</h1>
 <div class="meta">

@@ -22,7 +22,12 @@
 </style>
 </head>
 <body>
-<div class="nav"><a href="javascript:history.back()">← Voltar ao jogo</a> &nbsp;|&nbsp; <a href="terms-en.html">English version</a></div>
+<div class="nav"><a href="javascript:history.back()" id="backLink">← Voltar ao jogo</a> &nbsp;|&nbsp; <a href="terms-en.html">English version</a></div>
+<script>
+  if (document.referrer.indexOf('/legal/') !== -1) {
+    document.getElementById('backLink').textContent = '← Voltar à lista de documentos';
+  }
+</script>
 
 <h1>Termos de Uso — Domino Pernambuco</h1>
 <div class="meta">
